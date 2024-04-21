@@ -1,6 +1,7 @@
 import Section from "@/components/Section";
 import Text from "@/components/Text";
 import { User } from "@/fillMe";
+import { COLORS } from "@/styles/colors";
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -25,9 +26,9 @@ function LandingSection() {
   }, [word]);
 
   return (
-    <Section height={950} bgColor="#000">
+    <Section height={950} bgColor={COLORS.BLACK}>
       <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
-        <Text fs={50} fw={700} color="#fff" align="center">
+        <Text fs={50} fw={700} color={COLORS.WHITE} align="center">
           안녕하세요
           <br />
           {word}
@@ -35,7 +36,7 @@ function LandingSection() {
       </motion.div>
       <Text
         fs={25}
-        color="#fff"
+        color={COLORS.WHITE}
         align="right"
         letterS={2}
         lineH={40}

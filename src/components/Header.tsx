@@ -1,5 +1,6 @@
 import Flex from "@/components/Flex";
 import { User } from "@/fillMe";
+import { COLORS } from "@/styles/colors";
 
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
@@ -50,14 +51,14 @@ const Wrapper = styled.nav`
   align-items: center;
 
   padding: 30px;
-  border-bottom: 2px outset #888;
-  background-color: #000;
+  border-bottom: 2px outset ${COLORS.GRAY};
+  background-color: ${COLORS.BLACK};
 `;
 
 const Text = styled.p`
   font-size: 25px;
   font-weight: 600;
-  color: #fff;
+  color: ${COLORS.WHITE};
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 

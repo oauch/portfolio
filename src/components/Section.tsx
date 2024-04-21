@@ -1,3 +1,4 @@
+import { COLORS } from "@/styles/colors";
 import { SectionProps } from "@/types/section";
 import styled from "@emotion/styled";
 
@@ -13,5 +14,6 @@ const Wrapper = styled.section<SectionProps>`
   justify-content: center;
   align-items: center;
   height: ${({ height }) => height}px;
-  background-color: ${({ bgColor = "#fff" }) => bgColor};
+  border-radius: 20px;
+  background-color: ${({ bgColor = COLORS.WHITE }) => bgColor};
 `;
