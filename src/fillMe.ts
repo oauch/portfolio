@@ -1,6 +1,6 @@
 import CSS from "../public/icons/CSS.svg";
 import Discord from "../public/icons/Discord.svg";
-import Emotion from "../public/icons/Emotion-Light.svg";
+import Emotion from "../public/icons/Emotion.svg";
 import Figma from "../public/icons/Figma.svg";
 import Git from "../public/icons/Git.svg";
 import GitHub from "../public/icons/GitHub.svg";

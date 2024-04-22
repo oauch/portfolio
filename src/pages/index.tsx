@@ -1,5 +1,6 @@
 import AboutMeSection from "@/components/AboutMeSection";
 import Header from "@/components/Header";
+import HubsSection from "@/components/HubsSection";
 import LandingSection from "@/components/LandingSection";
 import SkillsSection from "@/components/SkillsSection";
 
@@ -11,6 +12,7 @@ function Home() {
         <LandingSection />
         <AboutMeSection />
         <SkillsSection />
+        <HubsSection />
       </main>
     </>
   );
