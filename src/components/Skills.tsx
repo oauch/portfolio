@@ -27,6 +27,7 @@ const InWrapper = styled.div`
   padding: 15px;
   border-radius: 15px;
   background-color: ${COLORS.WHITE};
+  box-shadow: 3px 3px 3px 3px ${COLORS.GRAY};
 `;
 
 const Title = styled(Text)`
