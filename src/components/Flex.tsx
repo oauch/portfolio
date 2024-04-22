@@ -10,7 +10,7 @@ export default Flex;
 
 const Wrapper = styled.div<FlexProps>`
   display: flex;
-  flex-direction: ${({ isCol = true }) => (isCol ? "row" : "column")};
+  flex-direction: ${({ isRow = true }) => (isRow ? "row" : "column")};
   justify-content: ${({ justify = "center" }) => JustifyConvert(justify)};
   align-items: ${({ align = "center" }) => AlignCovert(align)};
   gap: ${({ gap }) => gap && `${gap}px`};

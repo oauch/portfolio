@@ -6,6 +6,7 @@ import { COLORS } from "@/styles/colors";
 import ImgWrapper from "@/components/ImgWrapper";
 import Skills from "@/components/Skills";
 import styled from "@emotion/styled";
+import Flex from "./Flex";
 
 function SkillsSection() {
   return (
@@ -17,12 +18,14 @@ function SkillsSection() {
         <Skills name={"FrontEnd"}>
           <ImgWrapper items={User.skills.frontEnd} />
         </Skills>
-        <Skills name={"Version Control"}>
-          <ImgWrapper items={User.skills.version} />
-        </Skills>
-        <Skills name={"Communication"}>
-          <ImgWrapper items={User.skills.communication} />
-        </Skills>
+        <Flex isRow={false} gap={20}>
+          <Skills name={"Version Control"}>
+            <ImgWrapper items={User.skills.version} />
+          </Skills>
+          <Skills name={"Communication"}>
+            <ImgWrapper items={User.skills.communication} />
+          </Skills>
+        </Flex>
       </SkillWrapper>
     </Section>
   );

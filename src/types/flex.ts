@@ -11,7 +11,7 @@ type JustifyContents =
 type AlignItems = "start" | "end" | "center";
 
 interface FlexProps extends DefaultProps {
-  isCol?: boolean;
+  isRow?: boolean;
   justify?: JustifyContents;
   align?: AlignItems;
   gap?: number;
