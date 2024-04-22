@@ -13,7 +13,8 @@ const Wrapper = styled.section<SectionProps>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  gap: 50px;
   height: ${({ height }) => height}px;
-  border-radius: 20px;
   background-color: ${({ bgColor = COLORS.WHITE }) => bgColor};
 `;

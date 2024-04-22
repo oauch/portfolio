@@ -13,14 +13,14 @@ const InfoData = [
 
 function AboutMeSection() {
   return (
-    <Wrapper height={350}>
+    <Section height={350}>
       <Text fs={4.5} fw={800}>
         About Me
       </Text>
       <InfoWrapper justify="between">
         {InfoData.map((obj) =>
           Object.entries(obj).map(([key, value]) => (
-            <Info key={key} isCol={false} align="center">
+            <Info key={key} isRow={false} align="center">
               <Title fs={3} fw={600}>
                 {key}
               </Title>
@@ -29,15 +29,10 @@ function AboutMeSection() {
           ))
         )}
       </InfoWrapper>
-    </Wrapper>
+    </Section>
   );
 }
 export default AboutMeSection;
-
-const Wrapper = styled(Section)`
-  padding: 20px;
-  gap: 50px;
-`;
 
 const InfoWrapper = styled(Flex)`
   width: 100%;

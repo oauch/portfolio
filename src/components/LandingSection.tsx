@@ -33,19 +33,19 @@ function LandingSection() {
           <br />
           {word}
         </Text>
+        <Text
+          fs={2.5}
+          color={COLORS.WHITE}
+          align="right"
+          letterS={2}
+          lineH={40}
+          style={{ marginTop: "20px" }}
+        >
+          규칙적인 삶을 좋아하고, 빠른 변화가 없더라도
+          <br />
+          꾸준하게 하는 것을 좋아합니다.
+        </Text>
       </motion.div>
-      <Text
-        fs={2.5}
-        color={COLORS.WHITE}
-        align="right"
-        letterS={2}
-        lineH={40}
-        style={{ marginTop: "20px" }}
-      >
-        규칙적인 삶을 좋아하고, 빠른 변화가 없더라도
-        <br />
-        꾸준하게 하는 것을 좋아합니다.
-      </Text>
     </Section>
   );
 }

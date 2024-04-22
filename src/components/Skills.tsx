@@ -10,22 +10,18 @@ interface SkillsProps extends DefaultProps {
 
 function Skills({ name, children }: SkillsProps) {
   return (
-    <Wrapper>
+    <Flex>
       <InWrapper>
         <Title fs={2.8} fw={600} color={COLORS.SKILLS_TITLE}>
           {name}
         </Title>
         {children}
       </InWrapper>
-    </Wrapper>
+    </Flex>
   );
 }
 
 export default Skills;
-
-const Wrapper = styled(Flex)`
-  margin-top: 30px;
-`;
 
 const InWrapper = styled.div`
   padding: 15px;
