@@ -6,10 +6,10 @@ import { COLORS } from "@/styles/colors";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const typingWord = `론트엔드 개발자 ${User.name}`;
+const typingWord = `E 개발자 ${User.name}`;
 
 function LandingSection() {
-  const [word, setWord] = useState("프");
+  const [word, setWord] = useState("F");
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -28,14 +28,14 @@ function LandingSection() {
   return (
     <Section height={950} bgColor={COLORS.BLACK}>
       <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
-        <Text fs={50} fw={700} color={COLORS.WHITE} align="center">
+        <Text fs={5} fw={700} color={COLORS.WHITE} align="center">
           안녕하세요
           <br />
           {word}
         </Text>
       </motion.div>
       <Text
-        fs={25}
+        fs={2.5}
         color={COLORS.WHITE}
         align="right"
         letterS={2}

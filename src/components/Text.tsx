@@ -8,7 +8,7 @@ function Text({ children, ...props }: TextProps) {
 export default Text;
 
 const Wrapper = styled.p<TextProps>`
-  font-size: ${({ fs = 12 }) => fs && `${fs}px`};
+  font-size: ${({ fs = 1.2 }) => fs && `${fs}`}rem;
   font-weight: ${({ fw = 400 }) => fw};
   font-family: ${({ font }) => font};
   text-align: ${({ align }) => align};

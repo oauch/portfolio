@@ -14,17 +14,17 @@ const InfoData = [
 function AboutMeSection() {
   return (
     <Wrapper height={350}>
-      <Text fs={45} fw={800}>
+      <Text fs={4.5} fw={800}>
         About Me
       </Text>
       <InfoWrapper justify="between">
         {InfoData.map((obj) =>
           Object.entries(obj).map(([key, value]) => (
-            <Info isCol={false} align="center" key={key}>
-              <Title fs={30} fw={600}>
+            <Info key={key} isCol={false} align="center">
+              <Title fs={3} fw={600}>
                 {key}
               </Title>
-              <Text fs={25}>{value}</Text>
+              <Text fs={2.5}>{value}</Text>
             </Info>
           ))
         )}

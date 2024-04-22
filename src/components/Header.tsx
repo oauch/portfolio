@@ -51,14 +51,13 @@ const Wrapper = styled.nav`
   align-items: center;
 
   padding: 30px;
-  border-bottom: 2px outset ${COLORS.GRAY};
-  background-color: ${COLORS.BLACK};
+  background-color: ${COLORS.WHITE};
 `;
 
 const Text = styled.p`
-  font-size: 25px;
+  font-size: 2.5rem;
   font-weight: 600;
-  color: ${COLORS.WHITE};
+  color: ${COLORS.BLACK};
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 
