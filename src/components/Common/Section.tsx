@@ -9,12 +9,12 @@ function Section({ children, ...props }: SectionProps) {
 export default Section;
 
 const Wrapper = styled.section<SectionProps>`
+  height: ${({ height }) => `${height}px` ?? "auto"};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   gap: 50px;
-  height: ${({ height }) => height}px;
+  padding: 40px 20px;
   background-color: ${({ bgColor = COLORS.WHITE }) => bgColor};
 `;

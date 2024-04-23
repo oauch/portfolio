@@ -52,6 +52,7 @@ const Wrapper = styled.nav`
 
   padding: 30px;
   background-color: ${COLORS.WHITE};
+  z-index: 9999;
 `;
 
 const Text = styled.p`
