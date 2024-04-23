@@ -66,7 +66,13 @@ export const USER = {
       HEADCOUNT: 5,
       GITHUB: "https://github.com/CodeJaws/Jawstify",
       URL: "https://taskify4.vercel.app/",
-      SKILLS: ["React", "Next.js", "Styled-Components", "Zustand"],
+      SKILLS: [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Styled-Components",
+        "Zustand",
+      ],
       IMAGES: [
         { src: Jaws1, alt: "랜딩 페이지" },
         { src: Jaws2, alt: "로그인 페이지" },

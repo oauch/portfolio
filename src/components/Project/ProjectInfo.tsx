@@ -19,8 +19,8 @@ interface ProjectInfoProps {
 }
 
 function ProjectInfo({ images, skills, github, url }: ProjectInfoProps) {
-  const Skills = (skills: Array<string>) => {
-    return skills.join(" / ");
+  const Skills = (values: Array<string>) => {
+    return values.join(", ");
   };
   const JoinSkills = Skills(skills);
   return (
@@ -40,7 +40,7 @@ function ProjectInfo({ images, skills, github, url }: ProjectInfoProps) {
       </SwiperWrapper>
       <Flex isRow={false} gap={50}>
         <Text fs={1.8} fw={800} lineH={40}>
-          <Title>✅ 적용 기술</Title>
+          <Title>✅ 기술 스택</Title>
           <br />
           {JoinSkills}
         </Text>
@@ -65,4 +65,11 @@ const SwiperWrapper = styled(Swiper)`
 
 const Title = styled.strong`
   font-size: 2rem;
+`;
+
+const SkillWrapper = styled.div`
+  padding: 5px;
+  font-size: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 `;
