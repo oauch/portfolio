@@ -13,7 +13,7 @@ const InfoData = [
 
 function AboutMeSection() {
   return (
-    <Section height={350}>
+    <Section>
       <Text fs={4.5} fw={800}>
         About Me
       </Text>

@@ -11,7 +11,7 @@ import GitHub from "../../public/images/GitHubLogo.png";
 
 function HubsSection() {
   return (
-    <Section height={600} bgColor={COLORS.BLACK}>
+    <Section bgColor={COLORS.BLACK}>
       <Text fs={4.5} fw={800} color={COLORS.WHITE}>
         Hubs
       </Text>

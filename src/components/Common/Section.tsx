@@ -15,6 +15,6 @@ const Wrapper = styled.section<SectionProps>`
   justify-content: center;
   align-items: center;
   gap: 50px;
-  padding: 40px 20px;
+  padding: 80px 20px;
   background-color: ${({ bgColor = COLORS.WHITE }) => bgColor};
 `;

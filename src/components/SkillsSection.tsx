@@ -10,7 +10,7 @@ import Flex from "./Common/Flex";
 
 function SkillsSection() {
   return (
-    <Section height={700} bgColor={COLORS.SKILLS_BG}>
+    <Section bgColor={COLORS.SKILLS_BG}>
       <Text fs={4.5} fw={800} color={COLORS.SKILLS}>
         Skills
       </Text>
