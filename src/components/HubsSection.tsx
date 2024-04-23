@@ -1,6 +1,6 @@
-import Flex from "@/components/Flex";
-import Section from "@/components/Section";
-import Text from "@/components/Text";
+import Flex from "@/components/Common/Flex";
+import Section from "@/components/Common/Section";
+import Text from "@/components/Common/Text";
 import { COLORS } from "@/styles/colors";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";

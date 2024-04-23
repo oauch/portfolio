@@ -1,4 +1,4 @@
-import Flex from "@/components/Flex";
+import Flex from "@/components/Common/Flex";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import Image from "next/image";

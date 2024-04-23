@@ -5,7 +5,6 @@ function Meta() {
     <>
       <title>{META.TITLE}</title>
       <meta name="description" content={META.DESCRIPTION} />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta property="og:title" content={META.TITLE} />
       <meta property="og:type" content={META.TYPE} />
       <meta property="og:url" content={META.URL} />

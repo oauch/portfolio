@@ -1,4 +1,4 @@
-import Flex from "@/components/Flex";
+import Flex from "@/components/Common/Flex";
 import { User } from "@/fillMe";
 import { COLORS } from "@/styles/colors";
 

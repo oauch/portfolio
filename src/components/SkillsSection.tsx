@@ -1,12 +1,12 @@
-import Section from "@/components/Section";
-import Text from "@/components/Text";
+import Section from "@/components/Common/Section";
+import Text from "@/components/Common/Text";
 import { User } from "@/fillMe";
 import { COLORS } from "@/styles/colors";
 
-import ImgWrapper from "@/components/ImgWrapper";
-import Skills from "@/components/Skills";
+import ImgWrapper from "@/components/Skill/ImgWrapper";
+import Skills from "@/components/Skill/Skills";
 import styled from "@emotion/styled";
-import Flex from "./Flex";
+import Flex from "./Common/Flex";
 
 function SkillsSection() {
   return (

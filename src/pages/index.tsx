@@ -1,5 +1,5 @@
 import AboutMeSection from "@/components/AboutMeSection";
-import Header from "@/components/Header";
+import Header from "@/components/Common/Header";
 import HubsSection from "@/components/HubsSection";
 import LandingSection from "@/components/LandingSection";
 import SkillsSection from "@/components/SkillsSection";

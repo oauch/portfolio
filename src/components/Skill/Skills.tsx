@@ -1,5 +1,5 @@
-import Flex from "@/components/Flex";
-import Text from "@/components/Text";
+import Flex from "@/components/Common/Flex";
+import Text from "@/components/Common/Text";
 import { COLORS } from "@/styles/colors";
 import { DefaultProps } from "@/types/default";
 import styled from "@emotion/styled";

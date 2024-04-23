@@ -1,5 +1,5 @@
-import Section from "@/components/Section";
-import Text from "@/components/Text";
+import Section from "@/components/Common/Section";
+import Text from "@/components/Common/Text";
 import { User } from "@/fillMe";
 import { COLORS } from "@/styles/colors";
 
