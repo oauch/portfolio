@@ -1,15 +1,11 @@
 import Flex from "@/components/Common/Flex";
+import { ImagesProps } from "@/types/image";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-interface Skill {
-  src: string;
-  alt: string;
-}
-
 interface ImgWrapperProps {
-  items: Skill[];
+  items: ImagesProps[];
 }
 
 function ImgWrapper({ items }: ImgWrapperProps) {
