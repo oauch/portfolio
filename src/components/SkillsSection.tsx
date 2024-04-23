@@ -1,6 +1,6 @@
 import Section from "@/components/Common/Section";
 import Text from "@/components/Common/Text";
-import { User } from "@/fillMe";
+import { USER } from "@/fillMe";
 import { COLORS } from "@/styles/colors";
 
 import ImgWrapper from "@/components/Skill/ImgWrapper";
@@ -16,14 +16,14 @@ function SkillsSection() {
       </Text>
       <SkillWrapper>
         <Skills name={"FrontEnd"}>
-          <ImgWrapper items={User.skills.frontEnd} />
+          <ImgWrapper items={USER.SKILLS.FRONT_END} />
         </Skills>
         <Flex isRow={false} gap={20}>
           <Skills name={"Version Control"}>
-            <ImgWrapper items={User.skills.version} />
+            <ImgWrapper items={USER.SKILLS.VERSION} />
           </Skills>
           <Skills name={"Communication"}>
-            <ImgWrapper items={User.skills.communication} />
+            <ImgWrapper items={USER.SKILLS.COMMUNICATION} />
           </Skills>
         </Flex>
       </SkillWrapper>

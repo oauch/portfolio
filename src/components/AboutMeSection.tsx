@@ -1,14 +1,14 @@
 import Flex from "@/components/Common/Flex";
 import Section from "@/components/Common/Section";
 import Text from "@/components/Common/Text";
-import { User } from "@/fillMe";
+import { USER } from "@/fillMe";
 
 import styled from "@emotion/styled";
 
 const InfoData = [
-  { 이름: User.name },
-  { 생년월일: User.birth },
-  { 연락처: User.email },
+  { 이름: USER.NAME },
+  { 생년월일: USER.BIRTH },
+  { 연락처: USER.EMAIL },
 ];
 
 function AboutMeSection() {

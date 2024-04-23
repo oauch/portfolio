@@ -14,12 +14,14 @@ import TS from "../public/icons/TypeScript.svg";
 import Jotai from "../public/images/Jotai.png";
 import Zustand from "../public/images/Zustand.png";
 
-export const User = {
-  name: "임윤혁",
-  birth: "1999.02.02",
-  email: "dkssud4930@gmail.com",
-  skills: {
-    frontEnd: [
+export const USER = {
+  NAME: "임윤혁",
+  README: `규칙적인 삶을 좋아하고, 빠른 변화가 없더라도
+  꾸준하게 하는 것을 좋아합니다.`,
+  BIRTH: "1999.02.02",
+  EMAIL: "dkssud4930@gmail.com",
+  SKILLS: {
+    FRONT_END: [
       { src: HTML, alt: "HTML" },
       { src: CSS, alt: "CSS" },
       { src: JS, alt: "JS" },
@@ -32,11 +34,11 @@ export const User = {
       { src: Jotai, alt: "Jotai" },
       { src: Zustand, alt: "Zustand" },
     ],
-    version: [
+    VERSION: [
       { src: Git, alt: "Git" },
       { src: GitHub, alt: "GitHub" },
     ],
-    communication: [
+    COMMUNICATION: [
       { src: Discord, alt: "Discord" },
       { src: Figma, alt: "Figma" },
     ],

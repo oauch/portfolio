@@ -1,5 +1,5 @@
 import Flex from "@/components/Common/Flex";
-import { User } from "@/fillMe";
+import { USER } from "@/fillMe";
 import { COLORS } from "@/styles/colors";
 
 import styled from "@emotion/styled";
@@ -22,7 +22,7 @@ function Header() {
             console.log("홈");
           }}
         >
-          {User.name}의 포트폴리오
+          {USER.NAME}의 포트폴리오
         </Text>
       </motion.button>
       <Flex gap={50}>
