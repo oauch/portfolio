@@ -3,8 +3,8 @@ import Text from "@/components/Common/Text";
 import { USER } from "@/fillMe";
 import { COLORS } from "@/styles/colors";
 
+import useTyping from "@/hooks/useTyping";
 import { motion } from "framer-motion";
-import useTyping from "./hooks/useTyping";
 
 function LandingSection() {
   const { word } = useTyping(`FE 개발자 ${USER.NAME}`);
