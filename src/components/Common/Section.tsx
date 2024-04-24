@@ -9,7 +9,7 @@ function Section({ children, ...props }: SectionProps) {
 export default Section;
 
 const Wrapper = styled.section<SectionProps>`
-  height: ${({ height }) => `${height}px` ?? "auto"};
+  height: ${({ height }) => (height ? `${height}px` : "auto")};
   display: flex;
   flex-direction: column;
   justify-content: center;

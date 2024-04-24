@@ -15,5 +15,6 @@ const Wrapper = styled.p<TextProps>`
   line-height: ${({ lineH }) => lineH && `${lineH}px`};
   letter-spacing: ${({ letterS }) => letterS && `${letterS}px`};
   color: ${({ color }) => color};
+  white-space: pre-line;
   word-break: keep-all;
 `;

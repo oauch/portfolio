@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 function LandingSection() {
   const { word } = useTyping(`FE 개발자 ${USER.NAME}`);
   return (
-    <Section height={950} bgColor={COLORS.BLACK}>
+    <Section height={1000} bgColor={COLORS.BLACK}>
       <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
         <Text fs={5} fw={700} color={COLORS.WHITE} align="center">
           안녕하세요
