@@ -6,15 +6,20 @@ import SectionTitle from "@/components/Common/SectionTitle";
 import ImgWrapper from "@/components/Skill/ImgWrapper";
 import Skills from "@/components/Skill/Skills";
 import useScrollY from "@/hooks/useScrollY";
+
 import styled from "@emotion/styled";
 import { motion, useMotionValueEvent } from "framer-motion";
+import { forwardRef } from "react";
 import Flex from "./Common/Flex";
 
 const animate = { x: 0, opacity: 1 };
 const leftInitial = { x: -100, opacity: 0 };
 const rightInitial = { x: 100, opacity: 0 };
 
-function SkillsSection() {
+const SkillsSection = forwardRef<HTMLElement, {}>(function SkillsSection(
+  _,
+  ref
+) {
   const { scrollY, scrollAnimation, scrollAnimation2 } = useScrollY();
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 750) {
@@ -26,7 +31,7 @@ function SkillsSection() {
     }
   });
   return (
-    <Section bgColor={COLORS.SKILLS_BG}>
+    <Section ref={ref} bgColor={COLORS.SKILLS_BG}>
       <SectionTitle title="Skills" color={COLORS.SKILLS} />
       <SkillWrapper>
         <motion.div animate={scrollAnimation}>
@@ -49,7 +54,7 @@ function SkillsSection() {
       </SkillWrapper>
     </Section>
   );
-}
+});
 
 export default SkillsSection;
 

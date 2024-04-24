@@ -10,11 +10,15 @@ const headers = [
   { title: "About Me", scrollIndex: 1 },
   { title: "Skills", scrollIndex: 2 },
   { title: "Hubs", scrollIndex: 3 },
-  { title: "Project", scrollIndex: 5 },
-  { title: "Career", scrollIndex: 4 },
+  { title: "Project", scrollIndex: 4 },
+  // { title: "Career", scrollIndex: 5 },
 ];
 
-function Header() {
+interface HeaderProps {
+  onClick: (index: number) => void;
+}
+
+function Header({ onClick }: HeaderProps) {
   const { scrollY, scrollAnimation } = useScrollY();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -35,19 +39,13 @@ function Header() {
       initial={{ color: COLORS.WHITE, backgroundColor: COLORS.BLACK }}
     >
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-        <Text
-          onClick={() => {
-            console.log("홈");
-          }}
-        >
-          {USER.NAME}의 포트폴리오
-        </Text>
+        <Text onClick={() => onClick(0)}>{USER.NAME}의 포트폴리오</Text>
       </motion.button>
       <Flex gap={50}>
         {headers.map((val) => (
           <motion.button
             key={val.title}
-            onClick={() => console.log(val.title)}
+            onClick={() => onClick(val.scrollIndex)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

@@ -8,6 +8,7 @@ import { COLORS } from "@/styles/colors";
 
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
+import { forwardRef } from "react";
 
 const InfoData = [
   { 이름: USER.NAME },
@@ -15,10 +16,13 @@ const InfoData = [
   { 연락처: USER.EMAIL },
 ];
 
-function AboutMeSection() {
+const AboutMeSection = forwardRef<HTMLElement, {}>(function AboutMeSection(
+  _,
+  ref
+) {
   const { initial, scrollAnimation } = useMario(300);
   return (
-    <Section bgColor={COLORS.GRAY_F5}>
+    <Section bgColor={COLORS.GRAY_F5} ref={ref}>
       <SectionTitle title="About Me" />
       <InfoWrapper justify="between">
         {InfoData.map((obj) =>
@@ -34,7 +38,7 @@ function AboutMeSection() {
       </InfoWrapper>
     </Section>
   );
-}
+});
 export default AboutMeSection;
 
 const InfoWrapper = styled(Flex)`

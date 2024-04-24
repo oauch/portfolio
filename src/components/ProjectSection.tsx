@@ -1,20 +1,24 @@
 import Flex from "@/components/Common/Flex";
 import Section from "@/components/Common/Section";
+import SectionTitle from "@/components/Common/SectionTitle";
 import Text from "@/components/Common/Text";
+import ProjectInfo from "@/components/Project/ProjectInfo";
+import ProjectName from "@/components/Project/ProjectName";
 import { USER } from "@/fillMe";
+import useMario from "@/hooks/useMario";
 import { COLORS } from "@/styles/colors";
 
-import SectionTitle from "@/components/Common/SectionTitle";
-import useMario from "@/hooks/useMario";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import ProjectInfo from "./Project/ProjectInfo";
-import ProjectName from "./Project/ProjectName";
+import { forwardRef } from "react";
 
-function ProjectSection() {
+const ProjectSection = forwardRef<HTMLElement, {}>(function ProjectSection(
+  _,
+  ref
+) {
   const { initial, scrollAnimation } = useMario(2000);
   return (
-    <Section bgColor="#4F6F52">
+    <Section ref={ref} bgColor="#4F6F52">
       <SectionTitle title="Project" color={COLORS.PROJECT} />
       <motion.div initial={initial} animate={scrollAnimation}>
         <Flex isRow={false} gap={30}>
@@ -145,7 +149,7 @@ function ProjectSection() {
       </motion.div>
     </Section>
   );
-}
+});
 
 export default ProjectSection;
 

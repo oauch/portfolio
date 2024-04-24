@@ -3,16 +3,18 @@ import Section from "@/components/Common/Section";
 import SectionTitle from "@/components/Common/SectionTitle";
 import Text from "@/components/Common/Text";
 import { COLORS } from "@/styles/colors";
+
+import Velog from "@/icons/Velog.svg";
+import GitHub from "@/images/GitHubLogo.png";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import Velog from "../../public/icons/Velog.svg";
-import GitHub from "../../public/images/GitHubLogo.png";
+import { forwardRef } from "react";
 
-function HubsSection() {
+const HubsSection = forwardRef<HTMLElement, {}>(function HubsSection(_, ref) {
   return (
-    <Section bgColor={COLORS.BLACK}>
+    <Section ref={ref} bgColor={COLORS.BLACK}>
       <SectionTitle title="Hubs" color={COLORS.WHITE} />
       <Flex gap={30}>
         <motion.article whileHover={{ scale: 1.1 }}>
@@ -47,7 +49,7 @@ function HubsSection() {
       </Flex>
     </Section>
   );
-}
+});
 
 export default HubsSection;
 

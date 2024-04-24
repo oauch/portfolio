@@ -1,10 +1,18 @@
 import { COLORS } from "@/styles/colors";
 import { SectionProps } from "@/types/section";
 import styled from "@emotion/styled";
+import { forwardRef } from "react";
 
-function Section({ children, ...props }: SectionProps) {
-  return <Wrapper {...props}>{children}</Wrapper>;
-}
+const Section = forwardRef<HTMLElement, SectionProps>(function Section(
+  { children, ...props },
+  ref
+) {
+  return (
+    <Wrapper ref={ref} {...props}>
+      {children}
+    </Wrapper>
+  );
+});
 
 export default Section;
 
