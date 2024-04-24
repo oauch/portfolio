@@ -1,9 +1,10 @@
 import Flex from "@/components/Common/Flex";
 import { USER } from "@/fillMe";
+import useScrollY from "@/hooks/useScrollY";
 import { COLORS } from "@/styles/colors";
 
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
+import { motion, useMotionValueEvent } from "framer-motion";
 
 const headers = [
   { title: "About Me", scrollIndex: 1 },
@@ -14,8 +15,25 @@ const headers = [
 ];
 
 function Header() {
+  const { scrollY, scrollAnimation } = useScrollY();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    latest > 910
+      ? scrollAnimation.start({
+          color: COLORS.BLACK,
+          backgroundColor: COLORS.WHITE,
+        })
+      : scrollAnimation.start({
+          color: COLORS.WHITE,
+          backgroundColor: COLORS.BLACK,
+        });
+  });
+
   return (
-    <Wrapper>
+    <Wrapper
+      animate={scrollAnimation}
+      initial={{ color: COLORS.WHITE, backgroundColor: COLORS.BLACK }}
+    >
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <Text
           onClick={() => {
@@ -43,7 +61,7 @@ function Header() {
 
 export default Header;
 
-const Wrapper = styled.nav`
+const Wrapper = styled(motion.nav)`
   width: 100%;
   position: fixed;
   display: flex;
@@ -51,14 +69,12 @@ const Wrapper = styled.nav`
   align-items: center;
 
   padding: 30px;
-  background-color: ${COLORS.WHITE};
   z-index: 9999;
 `;
 
 const Text = styled.p`
   font-size: 2.5rem;
   font-weight: 600;
-  color: ${COLORS.BLACK};
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 

@@ -2,8 +2,11 @@ import Flex from "@/components/Common/Flex";
 import Section from "@/components/Common/Section";
 import Text from "@/components/Common/Text";
 import { USER } from "@/fillMe";
+import useMario from "@/hooks/useMario";
+import { COLORS } from "@/styles/colors";
 
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 const InfoData = [
   { 이름: USER.NAME },
@@ -12,15 +15,18 @@ const InfoData = [
 ];
 
 function AboutMeSection() {
+  const { initial, scrollAnimation } = useMario(300);
   return (
-    <Section>
-      <Text fs={4.5} fw={800}>
-        About Me
-      </Text>
+    <Section bgColor={COLORS.GRAY_F5}>
+      <motion.div initial={initial} animate={scrollAnimation}>
+        <Text fs={4.5} fw={800}>
+          About Me
+        </Text>
+      </motion.div>
       <InfoWrapper justify="between">
         {InfoData.map((obj) =>
           Object.entries(obj).map(([key, value]) => (
-            <Info key={key} isRow={false} align="center">
+            <Info key={key} animate={scrollAnimation}>
               <Title fs={3} fw={600}>
                 {key}
               </Title>
@@ -38,8 +44,11 @@ const InfoWrapper = styled(Flex)`
   width: 100%;
 `;
 
-const Info = styled(Flex)`
+const Info = styled(motion.div)`
   width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Title = styled(Text)`
