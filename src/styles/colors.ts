@@ -8,4 +8,5 @@ export const COLORS = {
   SKILLS: "#E8DFCA",
   SKILLS_BG: "#1A4D2E",
   SKILLS_TITLE: "#4F6F52",
+  PROJECT: "#F5EFE6",
 };
