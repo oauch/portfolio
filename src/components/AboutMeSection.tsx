@@ -18,15 +18,13 @@ function AboutMeSection() {
   const { initial, scrollAnimation } = useMario(300);
   return (
     <Section bgColor={COLORS.GRAY_F5}>
-      <motion.div initial={initial} animate={scrollAnimation}>
-        <Text fs={4.5} fw={800}>
-          About Me
-        </Text>
-      </motion.div>
+      <Text fs={4.5} fw={800}>
+        About Me
+      </Text>
       <InfoWrapper justify="between">
         {InfoData.map((obj) =>
           Object.entries(obj).map(([key, value]) => (
-            <Info key={key} animate={scrollAnimation}>
+            <Info key={key} initial={initial} animate={scrollAnimation}>
               <Title fs={3} fw={600}>
                 {key}
               </Title>
