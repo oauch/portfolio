@@ -1,8 +1,8 @@
 import Section from "@/components/Common/Section";
-import Text from "@/components/Common/Text";
 import { USER } from "@/fillMe";
 import { COLORS } from "@/styles/colors";
 
+import SectionTitle from "@/components/Common/SectionTitle";
 import ImgWrapper from "@/components/Skill/ImgWrapper";
 import Skills from "@/components/Skill/Skills";
 import useScrollY from "@/hooks/useScrollY";
@@ -27,9 +27,7 @@ function SkillsSection() {
   });
   return (
     <Section bgColor={COLORS.SKILLS_BG}>
-      <Text fs={4.5} fw={800} color={COLORS.SKILLS}>
-        Skills
-      </Text>
+      <SectionTitle title="Skills" color={COLORS.SKILLS} />
       <SkillWrapper>
         <motion.div animate={scrollAnimation}>
           <Skills name={"FrontEnd"}>

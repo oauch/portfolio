@@ -1,5 +1,6 @@
 import Flex from "@/components/Common/Flex";
 import Section from "@/components/Common/Section";
+import SectionTitle from "@/components/Common/SectionTitle";
 import Text from "@/components/Common/Text";
 import { COLORS } from "@/styles/colors";
 import styled from "@emotion/styled";
@@ -12,9 +13,7 @@ import GitHub from "../../public/images/GitHubLogo.png";
 function HubsSection() {
   return (
     <Section bgColor={COLORS.BLACK}>
-      <Text fs={4.5} fw={800} color={COLORS.WHITE}>
-        Hubs
-      </Text>
+      <SectionTitle title="Hubs" color={COLORS.WHITE} />
       <Flex gap={30}>
         <motion.article whileHover={{ scale: 1.1 }}>
           <HubWrapper

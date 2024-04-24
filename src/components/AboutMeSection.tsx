@@ -1,5 +1,6 @@
 import Flex from "@/components/Common/Flex";
 import Section from "@/components/Common/Section";
+import SectionTitle from "@/components/Common/SectionTitle";
 import Text from "@/components/Common/Text";
 import { USER } from "@/fillMe";
 import useMario from "@/hooks/useMario";
@@ -18,9 +19,7 @@ function AboutMeSection() {
   const { initial, scrollAnimation } = useMario(300);
   return (
     <Section bgColor={COLORS.GRAY_F5}>
-      <Text fs={4.5} fw={800}>
-        About Me
-      </Text>
+      <SectionTitle title="About Me" />
       <InfoWrapper justify="between">
         {InfoData.map((obj) =>
           Object.entries(obj).map(([key, value]) => (

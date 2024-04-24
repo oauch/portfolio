@@ -4,6 +4,7 @@ import Text from "@/components/Common/Text";
 import { USER } from "@/fillMe";
 import { COLORS } from "@/styles/colors";
 
+import SectionTitle from "@/components/Common/SectionTitle";
 import useMario from "@/hooks/useMario";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
@@ -14,9 +15,7 @@ function ProjectSection() {
   const { initial, scrollAnimation } = useMario(2000);
   return (
     <Section bgColor="#4F6F52">
-      <Text fs={4.5} fw={800} color={COLORS.WHITE}>
-        Project
-      </Text>
+      <SectionTitle title="Project" color={COLORS.PROJECT} />
       <motion.div initial={initial} animate={scrollAnimation}>
         <Flex isRow={false} gap={30}>
           {/* Jawstify */}
