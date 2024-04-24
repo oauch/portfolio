@@ -24,7 +24,7 @@ const LandingSection = forwardRef<HTMLElement, {}>(function LandingSection(
         <Text
           fs={2.5}
           color={COLORS.WHITE}
-          align="right"
+          align="center"
           letterS={2}
           lineH={40}
           style={{ marginTop: "20px" }}
