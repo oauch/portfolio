@@ -25,7 +25,8 @@ function Header({ onClick }: HeaderProps) {
     latest > 910
       ? scrollAnimation.start({
           color: COLORS.BLACK,
-          backgroundColor: COLORS.WHITE,
+          backgroundColor: "rgba(255, 255, 255, 0.5)",
+          backdropFilter: "blur(5px)",
         })
       : scrollAnimation.start({
           color: COLORS.WHITE,
