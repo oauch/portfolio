@@ -39,6 +39,12 @@ function Header({ onClick }: HeaderProps) {
 
   useEffect(() => {
     setWidthSize(window.innerWidth);
+    const onSetWidth = () => {
+      setWidthSize(window.innerWidth);
+    };
+    window.addEventListener("resize", onSetWidth);
+
+    return () => window.removeEventListener("resize", onSetWidth);
   }, []);
 
   return (
