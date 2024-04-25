@@ -10,7 +10,7 @@ interface ProjectNameProps {
 function ProjectName({ name, date, headCount }: ProjectNameProps) {
   return (
     <>
-      <Text fs={3} fw={700}>
+      <Text fs={3} fw={700} color={COLORS.GREEN_4F}>
         {name}
       </Text>
       <Text fs={1.5} color={COLORS.GRAY_6C}>

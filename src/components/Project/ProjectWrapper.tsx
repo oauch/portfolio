@@ -25,7 +25,7 @@ function ProjectWrapper({ project, children }: ProjectWrapperProps) {
   return (
     <Wrapper isRow={false} justify="end" gap={20}>
       <ProjectName name={NAME} date={DATE} headCount={HEADCOUNT} />
-      <ProjectInWrapper align="start" gap={30}>
+      <ProjectInWrapper align="center" gap={30}>
         <ProjectInfo
           images={IMAGES}
           skills={SKILLS}
@@ -49,7 +49,7 @@ const Wrapper = styled(Flex)`
   background-color: ${COLORS.WHITE};
 
   ${TabletSize} {
-    width: 100%;
+    width: 90%;
   }
 `;
 

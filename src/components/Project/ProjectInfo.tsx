@@ -21,10 +21,10 @@ interface ProjectInfoProps {
 }
 
 function ProjectInfo({ images, skills, github, url }: ProjectInfoProps) {
-  const Skills = (values: Array<string>) => {
+  const joinSkills = (values: Array<string>) => {
     return values.join(", ");
   };
-  const JoinSkills = Skills(skills);
+  const JoinSkills = joinSkills(skills);
   return (
     <Flex isRow={false} align="center" gap={30}>
       <SwiperWrapper
@@ -41,17 +41,17 @@ function ProjectInfo({ images, skills, github, url }: ProjectInfoProps) {
               sizes="100%"
               src={val.src}
               alt={val.alt}
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
             />
           </SwiperSlide>
         ))}
       </SwiperWrapper>
-      <SkillWrapper isRow={false} gap={40}>
-        <Text fs={1.8} fw={800} lineH={40}>
+      <SkillWrapper isRow={false} gap={30}>
+        <Skills fs={1.8} fw={800} lineH={40}>
           <Title>✅ 기술 스택</Title>
           <br />
           {JoinSkills}
-        </Text>
+        </Skills>
         <Link href={github} target="_blank" rel="noreferrer">
           <Url>🔗 GitHub</Url>
         </Link>
@@ -80,18 +80,32 @@ const Title = styled.strong`
   font-size: 2rem;
 `;
 
+const Skills = styled(Text)`
+  ${MobileSize} {
+    font-size: 1.5rem;
+  }
+`;
+
 const Url = styled.strong`
   font-size: 2rem;
-  color: ${COLORS.SKILLS_TITLE};
+  color: ${COLORS.GREEN_4F};
 
   &:hover {
     opacity: 0.8;
     transition: all 0.15s ease-in;
+  }
+
+  ${MobileSize} {
+    font-size: 1.8rem;
   }
 `;
 
 const SkillWrapper = styled(Flex)`
   ${TabletSize} {
     gap: 20px;
+  }
+
+  ${MobileSize} {
+    text-align: center;
   }
 `;

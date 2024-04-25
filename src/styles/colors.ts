@@ -5,8 +5,8 @@ export const COLORS = {
   GRAY_F5: "#F5F5F5",
   GRAY_6C: "#6c757d",
   RED: "#D62124",
+  GREEN_1A: "#1A4D2E",
+  GREEN_4F: "#4F6F52",
   SKILLS: "#E8DFCA",
-  SKILLS_BG: "#1A4D2E",
-  SKILLS_TITLE: "#4F6F52",
   PROJECT: "#F5EFE6",
 };

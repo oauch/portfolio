@@ -32,7 +32,7 @@ const SkillsSection = forwardRef<HTMLElement, {}>(function SkillsSection(
     }
   });
   return (
-    <Section ref={ref} bgColor={COLORS.SKILLS_BG}>
+    <Section ref={ref} bgColor={COLORS.GREEN_1A}>
       <SectionTitle title="Skills" color={COLORS.SKILLS} />
       <SkillWrapper>
         <motion.div animate={scrollAnimation}>

@@ -12,7 +12,7 @@ function Skills({ name, children }: SkillsProps) {
   return (
     <Flex>
       <InWrapper>
-        <Title fs={2.8} fw={600} color={COLORS.SKILLS_TITLE}>
+        <Title fs={2.8} fw={600} color={COLORS.GREEN_4F}>
           {name}
         </Title>
         {children}
