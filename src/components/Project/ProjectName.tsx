@@ -13,7 +13,7 @@ function ProjectName({ name, date, headCount }: ProjectNameProps) {
       <Text fs={3} fw={700}>
         {name}
       </Text>
-      <Text fs={1.5} color={COLORS.GRAY}>
+      <Text fs={1.5} color={COLORS.GRAY_6C}>
         {headCount ? date + ` (${headCount}인 개발)` : date}
       </Text>
     </>
