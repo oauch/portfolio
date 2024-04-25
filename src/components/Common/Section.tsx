@@ -25,4 +25,5 @@ const Wrapper = styled.section<SectionProps>`
   gap: 50px;
   padding: 80px 20px;
   background-color: ${({ bgColor = COLORS.WHITE }) => bgColor};
+  overflow: hidden;
 `;
