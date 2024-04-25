@@ -13,7 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { forwardRef } from "react";
 
-const HubsSection = forwardRef<HTMLElement, {}>(function HubsSection(_, ref) {
+const HubsSection = forwardRef<HTMLElement, {}>(function (_, ref) {
   return (
     <Section ref={ref} bgColor={COLORS.BLACK}>
       <SectionTitle title="Hubs" color={COLORS.WHITE} />

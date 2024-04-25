@@ -17,10 +17,7 @@ const InfoData = [
   { 연락처: USER.EMAIL },
 ];
 
-const AboutMeSection = forwardRef<HTMLElement, {}>(function AboutMeSection(
-  _,
-  ref
-) {
+const AboutMeSection = forwardRef<HTMLElement, {}>(function (_, ref) {
   const { initial, scrollAnimation } = useMario(300);
   return (
     <Section bgColor={COLORS.GRAY_F5} ref={ref}>

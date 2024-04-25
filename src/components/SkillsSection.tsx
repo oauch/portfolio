@@ -17,10 +17,7 @@ const animate = { x: 0, opacity: 1 };
 const leftInitial = { x: -100, opacity: 0 };
 const rightInitial = { x: 100, opacity: 0 };
 
-const SkillsSection = forwardRef<HTMLElement, {}>(function SkillsSection(
-  _,
-  ref
-) {
+const SkillsSection = forwardRef<HTMLElement, {}>(function (_, ref) {
   const { scrollY, scrollAnimation, scrollAnimation2 } = useScrollY();
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 750) {

@@ -12,10 +12,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { forwardRef } from "react";
 
-const ProjectSection = forwardRef<HTMLElement, {}>(function ProjectSection(
-  _,
-  ref
-) {
+const ProjectSection = forwardRef<HTMLElement, {}>(function (_, ref) {
   const { initial, scrollAnimation } = useMario(2000);
   const { PROJECT } = USER;
   return (
