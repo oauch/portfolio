@@ -5,6 +5,7 @@ import Text from "@/components/Common/Text";
 import { USER } from "@/fillMe";
 import useMario from "@/hooks/useMario";
 import { COLORS } from "@/styles/colors";
+import { MobileSize } from "@/styles/mediaQuery";
 
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
@@ -43,6 +44,11 @@ export default AboutMeSection;
 
 const InfoWrapper = styled(Flex)`
   width: 100%;
+
+  ${MobileSize} {
+    flex-direction: column;
+    gap: 50px;
+  }
 `;
 
 const Info = styled(motion.div)`
@@ -50,6 +56,10 @@ const Info = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  ${MobileSize} {
+    width: 100%;
+  }
 `;
 
 const Title = styled(Text)`

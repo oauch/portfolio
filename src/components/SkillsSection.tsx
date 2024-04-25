@@ -7,6 +7,7 @@ import ImgWrapper from "@/components/Skill/ImgWrapper";
 import Skills from "@/components/Skill/Skills";
 import useScrollY from "@/hooks/useScrollY";
 
+import { MobileSize } from "@/styles/mediaQuery";
 import styled from "@emotion/styled";
 import { motion, useMotionValueEvent } from "framer-motion";
 import { forwardRef } from "react";
@@ -62,4 +63,9 @@ const SkillWrapper = styled.article`
   display: flex;
   align-items: flex-start;
   gap: 25px;
+
+  ${MobileSize} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;

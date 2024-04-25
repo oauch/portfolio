@@ -1,5 +1,7 @@
 import Flex from "@/components/Common/Flex";
 import Text from "@/components/Common/Text";
+import { COLORS } from "@/styles/colors";
+import { MobileSize, TabletSize } from "@/styles/mediaQuery";
 import { ImagesProps } from "@/types/image";
 
 import styled from "@emotion/styled";
@@ -38,19 +40,19 @@ function ProjectInfo({ images, skills, github, url }: ProjectInfoProps) {
           </SwiperSlide>
         ))}
       </SwiperWrapper>
-      <Flex isRow={false} gap={50}>
+      <SkillWrapper isRow={false} gap={40}>
         <Text fs={1.8} fw={800} lineH={40}>
           <Title>✅ 기술 스택</Title>
           <br />
           {JoinSkills}
         </Text>
         <Link href={github} target="_blank" rel="noreferrer">
-          <Title>🔗 GitHub</Title>
+          <Url>🔗 GitHub</Url>
         </Link>
         <Link href={url} target="_blank" rel="noreferrer">
-          <Title>🔗 배포 사이트</Title>
+          <Url>🔗 배포 사이트</Url>
         </Link>
-      </Flex>
+      </SkillWrapper>
     </Flex>
   );
 }
@@ -61,15 +63,29 @@ const SwiperWrapper = styled(Swiper)`
   width: 600px;
   height: 350px;
   border-radius: 15px;
+
+  ${MobileSize} {
+    width: 300px;
+    height: 180px;
+  }
 `;
 
 const Title = styled.strong`
   font-size: 2rem;
 `;
 
-const SkillWrapper = styled.div`
-  padding: 5px;
-  font-size: 1.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
+const Url = styled.strong`
+  font-size: 2rem;
+  color: ${COLORS.SKILLS_TITLE};
+
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.15s ease-in;
+  }
+`;
+
+const SkillWrapper = styled(Flex)`
+  ${TabletSize} {
+    gap: 20px;
+  }
 `;

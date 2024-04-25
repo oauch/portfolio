@@ -2,9 +2,11 @@ import Flex from "@/components/Common/Flex";
 import { USER } from "@/fillMe";
 import useScrollY from "@/hooks/useScrollY";
 import { COLORS } from "@/styles/colors";
+import { MobileSize, breakPoints } from "@/styles/mediaQuery";
 
 import styled from "@emotion/styled";
 import { motion, useMotionValueEvent } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const headers = [
   { title: "About Me", scrollIndex: 1 },
@@ -19,14 +21,15 @@ interface HeaderProps {
 }
 
 function Header({ onClick }: HeaderProps) {
+  const [widthSize, setWidthSize] = useState(0);
   const { scrollY, scrollAnimation } = useScrollY();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     latest > 910
       ? scrollAnimation.start({
           color: COLORS.BLACK,
-          backgroundColor: "rgba(255, 255, 255, 0.5)",
-          backdropFilter: "blur(5px)",
+          backgroundColor: "rgba(255, 255, 255, 0.8)",
+          backdropFilter: "blur(10px)",
         })
       : scrollAnimation.start({
           color: COLORS.WHITE,
@@ -34,27 +37,37 @@ function Header({ onClick }: HeaderProps) {
         });
   });
 
+  useEffect(() => {
+    setWidthSize(window.innerWidth);
+  }, []);
+
   return (
-    <Wrapper
-      animate={scrollAnimation}
-      initial={{ color: COLORS.WHITE, backgroundColor: COLORS.BLACK }}
-    >
-      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-        <Text onClick={() => onClick(0)}>{USER.NAME}의 포트폴리오</Text>
-      </motion.button>
-      <Flex gap={50}>
-        {headers.map((val) => (
-          <motion.button
-            key={val.title}
-            onClick={() => onClick(val.scrollIndex)}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Text>{val.title}</Text>
+    <>
+      {widthSize <= breakPoints.sm ? (
+        <></>
+      ) : (
+        <Wrapper
+          animate={scrollAnimation}
+          initial={{ color: COLORS.WHITE, backgroundColor: COLORS.BLACK }}
+        >
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <Text onClick={() => onClick(0)}>{USER.NAME}의 포트폴리오</Text>
           </motion.button>
-        ))}
-      </Flex>
-    </Wrapper>
+          <Flex gap={50}>
+            {headers.map((val) => (
+              <motion.button
+                key={val.title}
+                onClick={() => onClick(val.scrollIndex)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Text>{val.title}</Text>
+              </motion.button>
+            ))}
+          </Flex>
+        </Wrapper>
+      )}
+    </>
   );
 }
 
@@ -79,5 +92,9 @@ const Text = styled.p`
 
   &:hover {
     opacity: 0.5;
+  }
+
+  ${MobileSize} {
+    font-size: 2rem;
   }
 `;
