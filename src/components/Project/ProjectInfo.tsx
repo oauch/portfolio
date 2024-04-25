@@ -36,7 +36,13 @@ function ProjectInfo({ images, skills, github, url }: ProjectInfoProps) {
       >
         {images.map((val) => (
           <SwiperSlide key={val.alt}>
-            <Image fill sizes="100%" src={val.src} alt={val.alt} />
+            <Image
+              fill
+              sizes="100%"
+              src={val.src}
+              alt={val.alt}
+              objectFit="contain"
+            />
           </SwiperSlide>
         ))}
       </SwiperWrapper>
