@@ -4,6 +4,7 @@ function Meta() {
   return (
     <>
       <title>{META.TITLE}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content={META.DESCRIPTION} />
       <meta property="og:title" content={META.TITLE} />
       <meta property="og:type" content={META.TYPE} />
