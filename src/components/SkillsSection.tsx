@@ -1,17 +1,13 @@
+import Flex from "@/components/Common/Flex";
 import Section from "@/components/Common/Section";
-import { USER } from "@/fillMe";
-import { COLORS } from "@/styles/colors";
-
 import SectionTitle from "@/components/Common/SectionTitle";
-import ImgWrapper from "@/components/Skill/ImgWrapper";
 import Skills from "@/components/Skill/Skills";
 import useScrollY from "@/hooks/useScrollY";
-
-import Flex from "@/components/Common/Flex";
+import { COLORS } from "@/styles/colors";
 import { MobileSize } from "@/styles/mediaQuery";
 
 import styled from "@emotion/styled";
-import { motion, useMotionValueEvent } from "framer-motion";
+import { useMotionValueEvent } from "framer-motion";
 import { forwardRef } from "react";
 
 const animate = { x: 0, opacity: 1 };
@@ -33,22 +29,10 @@ const SkillsSection = forwardRef<HTMLElement, {}>(function (_, ref) {
     <Section ref={ref} bgColor={COLORS.GREEN_1A}>
       <SectionTitle title="Skills" color={COLORS.SKILLS} />
       <SkillWrapper>
-        <motion.div animate={scrollAnimation}>
-          <Skills name={"FrontEnd"}>
-            <ImgWrapper items={USER.SKILLS.FRONT_END} />
-          </Skills>
-        </motion.div>
+        <Skills name={"FrontEnd"} animation={scrollAnimation} />
         <Flex isRow={false} gap={20}>
-          <motion.div animate={scrollAnimation2}>
-            <Skills name={"Version Control"}>
-              <ImgWrapper items={USER.SKILLS.VERSION} />
-            </Skills>
-          </motion.div>
-          <motion.div animate={scrollAnimation2}>
-            <Skills name={"Communication"}>
-              <ImgWrapper items={USER.SKILLS.COMMUNICATION} />
-            </Skills>
-          </motion.div>
+          <Skills name={"Version Control"} animation={scrollAnimation2} />
+          <Skills name={"Communication"} animation={scrollAnimation2} />
         </Flex>
       </SkillWrapper>
     </Section>
