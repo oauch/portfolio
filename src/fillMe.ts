@@ -11,10 +11,12 @@ import React from "@/icons/React.svg";
 import ReactQuery from "@/icons/ReactQuery.svg";
 import StyledComponent from "@/icons/StyledComponents.svg";
 import TS from "@/icons/TypeScript.svg";
+import Velog from "@/icons/Velog.svg";
 import Project2 from "@/images/About_P.avif";
 import Jaws7 from "@/images/Account_Jaws.avif";
 import Jaws6 from "@/images/Card_Jaws.avif";
 import Jaws5 from "@/images/DashBoard_Jaws.avif";
+import HubsGitHub from "@/images/GitHubLogo.png";
 import Project4 from "@/images/Hubs_P.avif";
 import Jotai from "@/images/Jotai.png";
 import Jaws1 from "@/images/Landing_Jaws.avif";
@@ -39,6 +41,22 @@ export const USER = {
   꾸준하게 하는 것을 좋아합니다.`,
   BIRTH: "1999.02.02",
   EMAIL: "dkssud4930@gmail.com",
+  HUBS: {
+    GITHUB: {
+      width: 200,
+      src: HubsGitHub,
+      title: "소스 코드 저장소",
+      name: "Github",
+      href: "https://github.com/oauch",
+    },
+    BLOG: {
+      width: 150,
+      src: Velog,
+      title: "블로그",
+      name: "Velog",
+      href: "https://velog.io/@oauch/posts",
+    },
+  },
   SKILLS: {
     FRONT_END: [
       { src: HTML, alt: "HTML" },
