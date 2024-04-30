@@ -67,12 +67,12 @@ export default ProjectInfo;
 
 const SwiperWrapper = styled(Swiper)`
   width: 600px;
-  height: 350px;
+  height: 380px;
   border-radius: 15px;
 
   ${MobileSize} {
     width: 300px;
-    height: 180px;
+    height: 210px;
   }
 `;
 
