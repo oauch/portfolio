@@ -7,11 +7,12 @@ import ImgWrapper from "@/components/Skill/ImgWrapper";
 import Skills from "@/components/Skill/Skills";
 import useScrollY from "@/hooks/useScrollY";
 
+import Flex from "@/components/Common/Flex";
 import { MobileSize } from "@/styles/mediaQuery";
+
 import styled from "@emotion/styled";
 import { motion, useMotionValueEvent } from "framer-motion";
 import { forwardRef } from "react";
-import Flex from "./Common/Flex";
 
 const animate = { x: 0, opacity: 1 };
 const leftInitial = { x: -100, opacity: 0 };
