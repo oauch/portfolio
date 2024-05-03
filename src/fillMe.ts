@@ -15,6 +15,9 @@ import Velog from "@/icons/Velog.svg";
 import Project2 from "@/images/About_P.avif";
 import Jaws7 from "@/images/Account_Jaws.avif";
 import Jaws6 from "@/images/Card_Jaws.avif";
+import Christmas1 from "@/images/Christmas1.avif";
+import Christmas2 from "@/images/Christmas2.avif";
+import Christmas3 from "@/images/Christmas3.avif";
 import Jaws5 from "@/images/DashBoard_Jaws.avif";
 import HubsGitHub from "@/images/GitHubLogo.png";
 import Project4 from "@/images/Hubs_P.avif";
@@ -95,6 +98,25 @@ export const USER = {
         { src: Rolling4, alt: "롤링 페이퍼 페이지" },
         { src: Rolling5, alt: "롤링 페이퍼 모달창 (자세히 보기)" },
         { src: Rolling6, alt: "롤링 페이퍼 작성 페이지" },
+      ],
+    },
+    CHRISTMAS: {
+      NAME: "크리마스에 뭐하지?",
+      DATE: "2023.11 ~ 2023.12",
+      HEADCOUNT: 4,
+      GITHUB: "https://github.com/CrispyFront/christmas",
+      URL: "https://christmas-test.vercel.app/",
+      SKILLS: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Styled-Components",
+        "StoryBook",
+      ],
+      IMAGES: [
+        { src: Christmas1, alt: "메인 페이지" },
+        { src: Christmas2, alt: "테스트 페이지" },
+        { src: Christmas3, alt: "결과 페이지" },
       ],
     },
     JAWSTIFY: {

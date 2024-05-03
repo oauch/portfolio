@@ -78,6 +78,28 @@ const ProjectSection = forwardRef<HTMLElement, {}>(function (_, ref) {
               받을 수 있었습니다.
             </Description>
           </ProjectWrapper>
+          {/* 크리스마스에 뭐하지? */}
+          <ProjectWrapper project={PROJECT.CHRISTMAS}>
+            <Description fs={1.6} lineH={40}>
+              <Title>📝 크리스마스에 관한 유형 테스트 (MBTI 테스트)</Title>
+              <br />
+              <Accent>HTML / CSS / JS</Accent>와 <Accent>React</Accent>를 배우고
+              시작한 첫 프로젝트
+              <br />
+            </Description>
+            <Description fs={1.6} lineH={40}>
+              <Title>💡 알게된 점</Title>
+              <br />
+              해당 프로젝트는 <Accent>기획 / 디자인 / 백엔드 / 프론트</Accent>
+              까지 모든 분야를 경험 해볼 수 있었던 프로젝트였습니다. 프로젝트를
+              완료 후, 왜 각각의 역할이 나누어졌는지에 대해서 명확하게
+              알았습니다.
+              <br />
+              그리고 <Accent>StoryBook</Accent>을 이용하면서 직접 개발한
+              개발자가 아니더라도 (혹은 디자이너) UI를 쉽게 테스트 해볼 수
+              있다는 것을 알았습니다.
+            </Description>
+          </ProjectWrapper>
           {/* 롤링폴링 */}
           <ProjectWrapper project={PROJECT.ROLLING}>
             <Description fs={1.6} lineH={40}>
