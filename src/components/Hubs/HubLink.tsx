@@ -19,10 +19,10 @@ interface HubsLinkProps {
 }
 
 function HubsLink({ path, children }: HubsLinkProps) {
-  const { width, src, title, name } = path;
+  const { width, src, title, name, href } = path;
   return (
     <motion.article whileHover={{ scale: 1.1 }}>
-      <Wrapper href={path} target="_blank" rel="noreferrer">
+      <Wrapper href={href} target="_blank" rel="noreferrer">
         <Image width={width} src={src} alt={name} />
         {path === USER.HUBS.BLOG ? <br /> : <></>}
         <Text fs={2.5}>{title}</Text>
