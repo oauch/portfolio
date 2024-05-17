@@ -33,7 +33,7 @@ const ProjectSection = forwardRef<HTMLElement, {}>(function (_, ref) {
               <br />
               프로젝트를 진행하면서 <Accent>props로 ref</Accent>를 내려주면서
               오류를 만났는데 <Accent>forwardRef</Accent>를 사용해야 해결할 수
-              있다는 것을 프로젝트를 진행하면서 알게 되었습니다.
+              있다는 것을 알게 되었습니다.
             </Description>
             <Description fs={1.6} lineH={40}>
               <Title>👍🏻 좋았던 점</Title>
@@ -51,9 +51,6 @@ const ProjectSection = forwardRef<HTMLElement, {}>(function (_, ref) {
                 🦈 스마트하게 나의 일정을 칸반보드로 관리할 수 있는 플랫폼
               </Title>
               <br />
-              <Accent>Next.js</Accent>와 <Accent>TypeScript</Accent>를
-              프로젝트에 처음 적용 해보았던 프로젝트 프로젝트를 진행하면서 해당
-              기술들이 어떤 역할을 하는지 알게 되었습니다.
             </Description>
             <Description fs={1.6} lineH={40}>
               <Title>💡 알게된 점</Title>
@@ -83,9 +80,9 @@ const ProjectSection = forwardRef<HTMLElement, {}>(function (_, ref) {
             <Description fs={1.6} lineH={40}>
               <Title>📝 크리스마스에 관한 유형 테스트 (MBTI 테스트)</Title>
               <br />
-              <Accent>HTML / CSS / JS</Accent>와 <Accent>React</Accent>를 배우고
-              시작한 첫 프로젝트
-              <br />
+              <Accent>Next.js</Accent>와 <Accent>TypeScript</Accent>를
+              프로젝트에 처음 적용 해보았던 프로젝트 진행하면서 해당 기술들이
+              어떤 역할을 하는지 알게 되었습니다.
             </Description>
             <Description fs={1.6} lineH={40}>
               <Title>💡 알게된 점</Title>
