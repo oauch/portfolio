@@ -20,6 +20,36 @@ const ProjectSection = forwardRef<HTMLElement, {}>(function (_, ref) {
       <SectionTitle title="Project" color={COLORS.PROJECT} />
       <motion.div initial={initial} animate={scrollAnimation}>
         <Flex isRow={false} gap={30}>
+          {/* Neat UI */}
+          <ProjectWrapper project={PROJECT.NEAT_UI}>
+            <Description fs={1.6} lineH={40}>
+              <Title>🟢 Neat UI</Title>
+              <br />
+              <Accent>재사용 가능한 컴포넌트와 커스텀 훅</Accent>에 관심이
+              많아서 직접 라이브러리를 배포하고 직접 사용하기 위해
+              개발하였습니다.
+            </Description>
+            <Description fs={1.6} lineH={40}>
+              <Title>💡 알게된 점</Title>
+              <br />
+              이전에는 CRA와 Vite와 같은 내장된 번들러 환경에서 애플리케이션을
+              개발하고 배포하는 데 익숙했습니다. 그러나 라이브러리를 개발할 때는
+              이러한 도구들이 적합하지 않다고 느껴졌습니다.
+              <Accent>Rollup을 선택한 이유</Accent>는 다음과 같습니다.{" "}
+              <Accent>Rollup</Accent>은 효율적인 번들링과 ES 모듈 지원을
+              제공하여 라이브러리의 크기를 최적화할 수 있기 때문입니다. 또한
+              코드 최적화와 다양한 플러그인을 통한 유연성이 있어서 필요한 경우
+              번들링 과정을 세밀하게 제어할 수 있습니다.
+            </Description>
+            <Description fs={1.6} lineH={40}>
+              <Title>👍🏻 좋았던 점</Title>
+              <br />
+              라이브러리를 직접 개발하고 배포하는 경험은 매우 유익했습니다. 이미
+              유명한 UI 라이브러리들이 많지만, 필요한 경우 직접 컴포넌트를
+              제작할 수 있다는 점이 가장 큰 장점입니다. 이런 점에서 개인적으로
+              좋은 경험을 한 것 같습니다.
+            </Description>
+          </ProjectWrapper>
           {/* 포트폴리오 */}
           <ProjectWrapper project={PROJECT.PORTFOLIO}>
             <Description fs={1.6} lineH={40}>

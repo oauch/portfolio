@@ -28,6 +28,10 @@ import Rolling1 from "@/images/Landing_R.avif";
 import Rolling2 from "@/images/Main_R.avif";
 import Rolling5 from "@/images/Modal_R.avif";
 import Jaws4 from "@/images/MyDashboard_Jaws.avif";
+import NeatUI1 from "@/images/NeatUI1.webp";
+import NeatUI2 from "@/images/NeatUI2.webp";
+import NeatUI3 from "@/images/NeatUI3.webp";
+import NeatUI4 from "@/images/NeatUI4.webp";
 import Rolling3 from "@/images/NewPaper_R.avif";
 import Project5 from "@/images/Proeject_P.avif";
 import Rolling4 from "@/images/Rolling_R.avif";
@@ -84,6 +88,20 @@ export const USER = {
     ],
   },
   PROJECT: {
+    NEAT_UI: {
+      NAME: "Neat UI",
+      DATE: "2024.6 ~ ing",
+      HEADCOUNT: 1,
+      GITHUB: "https://github.com/oauch/neat-ui",
+      URL: "https://neat-ui.vercel.app/",
+      SKILLS: ["Next.js", "React", "TypeScript", "emotion", "Rollup"],
+      IMAGES: [
+        { src: NeatUI1, alt: "초기 페이지" },
+        { src: NeatUI2, alt: "컴포넌트 페이지" },
+        { src: NeatUI3, alt: "커스텀훅 페이지" },
+        { src: NeatUI4, alt: "npm 패키지 페이지" },
+      ],
+    },
     ROLLING: {
       NAME: "롤링폴링",
       DATE: "2023.11 ~ 2023.11",
